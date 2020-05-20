@@ -1,0 +1,30 @@
+// Общие стили для кнопок
+.btn {
+	transition: color .15s ease-in-out, border-color .15s ease-in-out, background-color .15s ease-in-out;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 11px 14px;
+	border-radius: 2px;
+	text-align: center;
+	border: 1px solid transparent;
+	text-transform: uppercase;
+	font-family: 'Hammersmith One';
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1;
+
+	&:hover {
+		text-decoration: none;
+		outline: none;
+		border: 1px solid $blue;
+	}
+}
+
+.btn-border {
+	border: 1px solid $blue;
+
+	&:hover {
+		background-color: $blue;
+		color: $white;
+	}
+}

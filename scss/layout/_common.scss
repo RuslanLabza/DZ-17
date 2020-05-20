@@ -1,0 +1,154 @@
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.intro {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	padding: 80px 0;
+	color: #fff;
+	margin-bottom: 70px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0.85;
+		background-image: linear-gradient(to top, #09052f, #311d5e);
+	}
+
+	.block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			content: '';
+			min-height: 510px;
+			width: 0;
+		}
+	}
+
+	.card {
+		text-align: center;
+		max-width: 771px;
+		margin: 0 auto;
+	}
+
+	h1 {
+		letter-spacing: 0.32px;
+		font-family: 'Playfair Display';
+		font-weight: 900;
+		position: relative;
+		padding-bottom: 20px;
+		margin: 0;
+
+		&::after {
+			content: '';
+			height: 1px;
+			width: 50px;
+			background-color: $blue;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	p {
+		margin-top: 30px;
+		margin-bottom: 50px;
+		letter-spacing: 0.7px;
+		font-weight: 300;
+	}
+}
+
+.slick-dots {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	@extend %listreset;
+
+	li {
+		padding: 0 5px;
+
+	}
+
+	button {
+		display: block;
+		padding: 0;
+		font-size: 0;
+		width: 10px;
+		height: 10px;
+		border: 1px solid $light-gray;
+		border-radius: 50%;
+		background-color: transparent;
+		transition: background .15s ease-in-out;
+		outline: none;
+
+		&:hover {
+			background-color: $blue;
+		}
+	}
+
+	.slick-active button {
+		background-color: $blue;
+	}
+}
+
+.content {
+	margin-bottom: 80px;
+
+	@include media('>=tablet') {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.image {
+		text-align: center;
+		margin-bottom: 30px;
+
+		@include media('>=tablet') {
+			margin: 0 100px 0 64px;
+		}
+	}
+
+
+	.text {
+		@include media('>=tablet') {
+			width: 57%;
+		}
+	}
+
+	h2 {
+		color: $dark-gray;
+		letter-spacing: 1.1px;
+		font-family: 'Playfair Display';
+		font-weight: 900;
+		text-transform: uppercase;
+		margin-bottom: 28px;
+	}
+
+	p {
+		color: $gray;
+		margin-bottom: 30px;
+		line-height: 1.57;
+		letter-spacing: 0.42px;
+		font-weight: 300;
+	}
+}
